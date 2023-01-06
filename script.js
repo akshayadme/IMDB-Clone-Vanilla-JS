@@ -15,7 +15,7 @@ input_submit.addEventListener("submit", (e) => {
   const search_text = input_box.value;
 
   fetchMoviesList(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&s=${search_text}&type=movie`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search_text}&type=movie`
   );
 });
 
@@ -25,7 +25,7 @@ const autoCompleteSearchMovies = async () => {
   const search_text = input_box.value;
 
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&s=${search_text}&plot=short&type=movie`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&s=${search_text}&plot=short&type=movie`
   );
 
   const fetched_data = await response.json();
@@ -71,7 +71,7 @@ const fetchMoviesList = async (url) => {
   if (fetched_data.Response === "True") {
     for (let data of fetched_data.Search) {
       const response = await fetch(
-        `http://www.omdbapi.com/?apikey=${API_KEY}&i=${data.imdbID}&plot=short`
+        `https://www.omdbapi.com/?apikey=${API_KEY}&i=${data.imdbID}&plot=short`
       );
       const res = await response.json();
 
@@ -98,7 +98,7 @@ const fetchMoviesList = async (url) => {
 
 const addFavourites = async (id) => {
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&i=${id}&plot=short`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&i=${id}&plot=short`
   );
   const res = await response.json();
 

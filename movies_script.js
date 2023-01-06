@@ -12,7 +12,7 @@ let tempMovie;
 
 window.addEventListener("load", async () => {
   const response = await fetch(
-    `http://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}&plot=full`
+    `https://www.omdbapi.com/?apikey=${API_KEY}&i=${imdbID}&plot=full`
   );
   const fetched_data = await response.json();
   tempMovie = fetched_data;
