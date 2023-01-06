@@ -1,5 +1,5 @@
 // IMDB API KEY
-const API_KEY = `YOUR API KEY`;
+const API_KEY = `121631c1`;
 
 const input_box = document.querySelector("#movie_input");
 const input_submit = document.querySelector("#imdb_form");

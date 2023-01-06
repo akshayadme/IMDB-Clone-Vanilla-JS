@@ -1,5 +1,5 @@
 //IMDB API KEY
-const API_KEY = `YOUR API KEY`;
+const API_KEY = `121631c1`;
 
 // -------------------------- get the imdbId from URL params
 
